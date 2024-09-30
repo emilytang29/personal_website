@@ -1,1 +1,430 @@
 /* Your SCSS here. */
+
+$font-stack: 'Nunito', sans-serif;
+$light-blue: #8ECAE6;
+$medium-blue: #219EBC;
+$dark-blue: #023047;
+$light-orange: #FFB703;
+$dark-orange: #FB8500;
+$light-tan: #D4B8A3;
+$khaki: #C3B091;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  HEADER SECTION  */
+.header {
+    background-color: $dark-blue;    
+    width: 100%;    
+    // ensures everything is centered vertically 
+    display: flex;
+    align-items: center;
+    // sticky navbar / header        
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    // smooth transition between sizes
+    transition: height 0.35s ease;
+}
+
+.header_name {
+    color: $khaki;
+    font-family: $font-stack;
+    padding-left: 20px;
+    // smooth transition between sizes
+    transition: height 0.35s ease;
+}
+
+.navbar {
+    // pushes the navbar to the right
+    margin-left: auto;
+}
+
+.navbar ul {
+    list-style: none; 
+    display: flex; 
+}
+
+.navbar li {
+    margin: 0 10px; 
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: $khaki; 
+    font-weight: bold;
+    font-family: $font-stack;
+}
+
+.navbar a:hover {
+    color: $light-orange; 
+}
+
+.navbar .nav-link.active {
+    color: $light-orange;
+}
+
+/*  MAIN SECTION */
+main {
+    flex: 1;
+    margin-top: 50px;
+    transition: margin-top 0.35s ease;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/*  CAROUSEL SUBSECTION */
+.carousel_next {
+    position: absolute;
+    transform: translateY(-470%); 
+    right: 2%; 
+    background-color: transparent; 
+    font-size: 50px;
+    border: none;
+    color: #fff; 
+    cursor: pointer; 
+    z-index: 9;
+    margin-top: 0px;
+}
+
+.carousel_next i:hover {
+    color: $dark-blue;
+}
+
+.carousel_prev i:hover {
+    color: $dark-blue;
+}
+
+
+.carousel_prev {
+    position: absolute;
+    transform: translateY(-470%); 
+    left: 2%; 
+    background-color: transparent; 
+    font-size: 50px;
+    border: none;
+    color: #fff; 
+    cursor: pointer; 
+    z-index: 9;
+    margin-top: 0px;
+}
+.carousel_slides img {
+    height: 700px;
+    width: auto;
+    max-height: 100%;
+}
+
+#carousel_one {
+    background-color: $light-blue;
+    align-items: stretch;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel_one_text {
+    color: $dark-blue;
+    font-family: $font-stack;
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.carousel_one_text_heading {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.carousel_one_text_body {
+    font-size: 30px;
+    margin-top: 0px; 
+}
+
+#carousel_two {
+    background-color: $medium-blue;
+    align-items: stretch;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel_two_text {
+    color: $dark-blue;
+    font-family: $font-stack;
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.carousel_two_text_heading {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.carousel_two_text_body {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#carousel_three {
+    background-color: $light-tan;
+    align-items: stretch;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel_three_text {
+    color: $dark-blue;
+    font-family: $font-stack;
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.carousel_three_text_heading {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.carousel_three_text_body {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+/*  MULTI-COLUMN LAYOUT SECTION */
+.multicolumn_layout {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $dark-blue;
+    height: 200px;
+    color: $khaki;
+    font-family: $font-stack;
+    align-items: center;
+}
+
+.multicolumn_layout i {
+    font-size: 90px;
+}
+
+.column {
+    flex: 1; 
+    max-width: 25%;
+    text-align: center;
+}
+
+/*  FIXED IMAGE BACKGROUND SECTION  */
+.fixed_background {
+    height: 500px;
+    margin-top: 0px;
+    background-image: url('../assets/ny.jpg');
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*  MODAL SECTION   */
+.modal {
+    background-color: $khaki;
+    height: 500px;
+}
+
+.modal_projects {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-stack;
+    align-items: center;
+}
+
+.modal h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: $font-stack;
+    font-size: 50px;
+    color: #fff;
+}
+
+.modal button {
+    height: 300px;
+    width: 300px;
+    border: none;
+    border-radius: 12px;
+}
+
+.modal button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;                         
+    cursor: pointer;                      
+    backdrop-filter: blur(5px);          
+    transition: background-color 0.3s, transform 0.3s;
+    transform: scale(1.05);              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.modal_one_button {
+    background-color: $light-orange;
+    font-family: $font-stack;
+    color: #fff;
+}
+
+.modal_two_button {
+    background-color: $medium-blue;
+    font-family: $font-stack;
+    color: #fff;
+}
+.modal_three_button {
+    background-color: $dark-orange;
+    font-family: $font-stack;
+    color: #fff;
+}
+
+.project {
+    flex: 1; 
+    max-width: 33%;
+    text-align: center;
+}
+
+@mixin modal($modal-name, $bg-color, $hover-color) {
+    .#{$modal-name} {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        background-color: $bg-color;
+        border-radius: 12px;
+        top: 50%;
+        left: 50%;
+        height: 95%;
+        width: 95%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-family: $font-stack;
+            color: white;
+            font-size: 70px;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+@include modal(modal_one_modal, $light-orange, $dark-orange);
+@include modal(modal_two_modal, $medium-blue, $dark-blue);
+@include modal(modal_three_modal, $dark-orange, $light-orange);
+
+/*  VIDEO SECTION   */
+.video video{
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.video {
+    padding-bottom: 0px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*  FOOTER SECTION  */
+.footer {
+    margin-bottom: 0px;
+    background-color: $dark-blue;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.footer ul li {
+    font-family: $font-stack;
+    color: $khaki;
+    cursor: pointer;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer_text {
+    font-family: $font-stack;
+    color: $khaki;
+    padding-left: 20px;
+}
+
+.footer i {
+    color: $khaki;
+}
+
+
+
+
+/*  MEDIA QUERIES   */
+@media (max-width: 1024px) and (max-height: 768px) {
+
+    .carousel_one_text_heading {
+        font-size: 40px;
+    }
+    
+    .carousel_one_text_body {
+        font-size: 25px;
+    }
+
+    .carousel_two_text_heading {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    
+    .carousel_two_text_body {
+        font-size: 25px;
+    }
+
+    .carousel_three_text_heading {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    
+    .carousel_three_text_body {
+        font-size: 25px;
+    }
+}

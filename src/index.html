@@ -4,10 +4,116 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Emily Tang's Personal Website</title>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <header class="header" id="header">
+            <h1 class="header_name" id="header_name">Emily Tang</h1>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#carousel_one" class="nav-link">About Me</a></li>
+                    <li><a href="#multicolumn_layout" class="nav-link">Traits</a></li>
+                    <li><a href="#modal" class="nav-link">Projects</a></li>
+                    <li><a href="#footer" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main" id="main">
+            <!-- CAROUSEL -->
+            <div class="carousel" id="carousel">
+                <div class="carousel_slides" id="carousel_slides">
+                    <div class="carousel_one slide" id="carousel_one">
+                        <image src="assets/headshot.jpg" class="carousel_headshot" id="carousel_headshot"></image>
+                        <div class="carousel_one_text" id="carousel_one_text">
+                            <h2 class="carousel_one_text_heading" id="carousel_one_text_heading">About Me</h2>
+                            <p class="carousel_one_text_body" id="carousel_one_text_body">Hi! Welcome to my website! I'm Emily, a curious and committed computer science student at the University of Illinois at Urbana-Champaign. <br> Feel free to explore this page and take a look at my projects, school involvement, and personal interests! Contact information can be found in the footer!</p>
+                        </div>
+                    </div>
+                    <div class="carousel_two slide" id="carousel_two">
+                        <image src="assets/graduation.jpg" class="carousel_graduation" id="carousel_graduation"></image>
+                        <div class="carousel_two_text" id="carousel_two_text">
+                            <h2 class="carousel_two_text_heading" id="carousel_two_text_heading">Education</h2>
+                            <p class="carousel_two_text_body" id="carousel_two_text_body">I currently study computer science at the University of Illinois at Urbana-Champaign.<br>Prior to that, I attended C.G. Woodson High School in Fairfax, Virginia.</p>
+                        </div>
+                    </div>
+                    <div class="carousel_three slide" id="carousel_three">
+                        <image src="assets/cake.jpg" class="carousel_cake" id="carousel_cake"></image>
+                        <div class="carousel_three_text" id="carousel_three_text">
+                            <h2 class="carousel_three_text_heading" id="carousel_three_text_heading">Interests</h2>
+                            <p class="carousel_three_text_body" id="carousel_three_text_body">In my free time, I enjoy baking, reading, and crocheting. I also really enjoy just hanging out with friends, trying new restaurants on Green Street at UIUC, and going on walks.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="carousel_next" id="carousel_next"><i class="fas fa-chevron-right"></i></button>
+                <button class="carousel_prev" id="carousel_prev"><i class="fas fa-chevron-left"></i></button>
+            </div>
+            <!-- MULTI-COLUMN LAYOUT -->
+             <div class="multicolumn_layout" id="multicolumn_layout">
+                <div class="column_one column" id="column_one">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3 class="column_text" id="column_text">Organized</h3>
+                </div>
+                <div class="column_two column" id="column_two">
+                    <i class="fa-solid fa-brush"></i>
+                    <h3 class="column_text" id="column_text">Creative</h3>
+                </div>
+                <div class="column_three column" id="column_three">
+                    <i class="fa-solid fa-square-check"></i>
+                    <h3 class="column_text" id="column_text">Committed</h3>
+                </div>
+                <div class="column_four column" id="column_four">
+                    <i class="fa-solid fa-check-double"></i>
+                    <h3 class="column_text" id="column_text">Determined</h3>
+                </div>
+             </div>
+            <!-- FIXED IMAGE BACKGROUND -->
+             <div class="fixed_background" id="fixed_background">
+             </div>
+            <!-- MODAL -->
+             <div class="modal" id="modal">
+                <h2 class="modal_header" id="modal_header">Projects</h2>
+                <div class="modal_projects" id="modal_projects">
+                    <div class="modal_one project" id="modal_one">
+                        <button class="modal_one_button" id="modal_one_button">Project 1</button>
+                    </div>
+                    <div class="modal_two project" id="modal_two">
+                        <button class="modal_two_button" id="modal_two_button">Project 2</button>
+                    </div>
+                    <div class="modal_three project" id="modal_three">
+                        <button class="modal_three_button" id="modal_three_button">Project 3</button>
+                    </div>
+                </div>
+             </div>
+            <div class="modal_one_modal" id="modal_one_modal">
+                <button class="modal_one_exit_button" id="modal_one_exit_button"><i class="fa-solid fa-x"></i></button>
+                <p>This is modal one!</p>
+            </div>
+            <div class="modal_two_modal" id="modal_two_modal">
+                <button class="modal_two_exit_button" id="modal_two_exit_button"><i class="fa-solid fa-x"></i></button>
+                <p>This is modal two!</p>
+            </div>
+            <div class="modal_three_modal" id="modal_three_modal">
+                <button class="modal_three_exit_button" id="modal_three_exit_button"><i class="fa-solid fa-x"></i></button>
+                <p>This is modal three!</p>
+            </div>
+            <!-- VIDEO -->
+             <div class="video" id="video">
+                <video autoplay loop muted>
+                    <source src="assets/lincolncenter.MP4" type="video/MP4">
+                </video>
+             </div>
+        </main>
+
+        <footer class="footer" id="footer">
+            <ul>
+                <li>emilytang2004@gmail.com</li>
+                <li><a href="https://www.linkedin.com/in/emily-tang-286574248/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/emly.tang/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://github.com/emilytang29"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </footer>
     </body>
 </html>
